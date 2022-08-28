@@ -5,7 +5,7 @@ Feature: Add Address Functionality
     And Enter valid user information to login form and click signin button
     Then User should be signin successfully
 
-  Scenario Outline:
+  Scenario Outline: Add an address
      And User should be navigate to My Account page
      And User should be click to Manage Address link
      And User should be enter address information

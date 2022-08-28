@@ -27,6 +27,10 @@ public class Parent {
         select.selectByVisibleText(value);
     }
 
+    public void waitUntilUrlToBe(String url) {
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.urlToBe(url));
+    }
 
     public void waitUntilVisible(WebElement element) {
         WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
@@ -44,6 +48,7 @@ public class Parent {
 
     public void clickFunction(WebElement element)
     {
+        waitUntilVisible(element);
         waitUntilClickable(element); // tıklanabilir olana kadar bekle
         scrollToElement(element); // elemente scroll yap
         element.click(); // click yap

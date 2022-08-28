@@ -16,6 +16,7 @@ public class CreateAccountSteps {
     @Given("Navigate to luma")
     public void navigateToLuma() {
         GWD.getDriver().get("https://magento.softwaretestingboard.com/");
+        GWD.getDriver().manage().window().maximize();
     }
 
     @When("Click register link")
